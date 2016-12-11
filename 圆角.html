@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    *{margin:0;padding:0;}
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            float: left;
+            margin: 20px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 200px;
+        }
+        div:first-of-type{
+                border-radius: 20px;
+        }
+        div:nth-child(2){
+            -webkit-border-radius:20px 0;
+            -moz-border-radius:20px 0;
+            border-radius:20px 0;
+        }
+        div:nth-child(3){
+            -webkit-border-radius:10px 40px 80px;
+            -moz-border-radius:10px 40px 80px;
+            border-radius:10px 40px 80px;
+        }
+        div:nth-child(4){
+            -webkit-border-radius:10px 20px 30px 40px;
+            -moz-border-radius:10px 20px 30px 40px;
+            border-radius:10px 20px 30px 40px;
+        }
+        div:nth-child(5){
+            border-top-left-radius: 10px; /*左上角*/
+            border-top-right-radius: 20px;
+            border-bottom-right-radius:40px;
+            border-bottom-left-radius:80px;
+        }
+        div:nth-child(6){
+            -webkit-border-radius:100px;
+            -moz-border-radius:100px;
+            border-radius:100px;
+        }
+        div:nth-child(7){
+            -webkit-border-radius:20px 20px 0 0;
+            -moz-border-radius:20px 20px 0 0;
+            border-radius:20px 20px 0 0;
+        }
+    div:nth-child(8){
+        -webkit-border-radius:0 0 20px 20px;
+        -moz-border-radius:0 0 20px 20px;
+        border-radius:0 0 20px 20px;
+    }
+    </style>
+
+</head>
+<body>
+<div>普通圆角</div>
+<div>设置两个值</div>
+<div>设置3个值</div>
+<div>设置4个值</div>
+<div>单个角设置</div>
+<div>圆</div>
+<div></div>
+<div></div>
+</body>
+</html>

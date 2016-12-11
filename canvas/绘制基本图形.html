@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        canvas{
+            border: 1px solid #000;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+    <script>
+            window.onload = function ()
+            {
+                //得到canvas
+              var cvs =document.getElementById("cvs");
+                //设置画布
+                if(cvs.getContext){
+                    var cvs_context = cvs.getContext('2d');
+                    cvs_context.fillStyle='red';//填充颜色
+                    cvs_context.fillRect(100,100,100,100);//绘制矩形
+                    cvs_context.strokeStyle='red';//填充颜色
+                    cvs_context.lineWidth=5;  //宽度
+                    cvs_context.strokeRect(300,100,100,100);//描边矩形
+                    cvs_context.clearRect(120,120,60,60);  //清除矩形
+                    cvs_context.moveTo(500,100); //开始
+                    cvs_context.lineTo(500,200);//结束
+                    cvs_context.stroke();  //填充
+                    //绘制三角形
+                    cvs_context.beginPath();//开启新路径
+                    cvs_context.moveTo(600,100);
+                    cvs_context.lineTo(650,200);
+                    cvs_context.lineTo(550,200);
+                    cvs_context.closePath();  //封闭路径
+                    cvs_context.stroke(); //填充
+
+                }
+            }
+    </script>
+</head>
+<body>
+<canvas width="1000" height="500" id="cvs">您的浏览器不支持</canvas>
+</body>
+</html>
